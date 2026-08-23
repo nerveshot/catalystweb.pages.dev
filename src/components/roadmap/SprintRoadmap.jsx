@@ -73,8 +73,9 @@ export default function SprintRoadmap({ onOpenProjectModal }) {
               className="glass-card"
               style={{
                 padding: '1.75rem 1.5rem',
-                background: 'linear-gradient(180deg, rgba(19, 21, 32, 0.8) 0%, rgba(13, 14, 21, 0.95) 100%)',
-                border: '1px solid rgba(255, 255, 255, 0.08)',
+                background: 'var(--bg-card)',
+                border: '1px solid var(--bg-card-border)',
+                boxShadow: 'var(--shadow-md)',
                 display: 'flex',
                 flexDirection: 'column',
                 position: 'relative'
@@ -86,7 +87,7 @@ export default function SprintRoadmap({ onOpenProjectModal }) {
                     fontFamily: 'var(--font-mono)',
                     fontSize: '1.25rem',
                     fontWeight: '900',
-                    color: 'var(--aurora-cyan-light)'
+                    color: 'var(--aurora-cyan)'
                   }}
                 >
                   {item.day}
@@ -98,16 +99,16 @@ export default function SprintRoadmap({ onOpenProjectModal }) {
                     fontWeight: '800',
                     padding: '0.2rem 0.55rem',
                     borderRadius: '9999px',
-                    background: 'rgba(99, 102, 241, 0.15)',
-                    color: '#c084fc',
-                    border: '1px solid rgba(99, 102, 241, 0.3)'
+                    background: 'rgba(79, 70, 229, 0.1)',
+                    color: 'var(--aurora-violet)',
+                    border: '1px solid rgba(79, 70, 229, 0.25)'
                   }}
                 >
                   {item.badge}
                 </span>
               </div>
 
-              <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem', fontWeight: '800', color: '#ffffff', lineHeight: '1.3', marginBottom: '0.6rem' }}>
+              <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem', fontWeight: '800', color: 'var(--text-primary)', lineHeight: '1.3', marginBottom: '0.6rem' }}>
                 {item.title}
               </h3>
 
@@ -123,8 +124,9 @@ export default function SprintRoadmap({ onOpenProjectModal }) {
           className="glass-panel"
           style={{
             padding: '2rem 2.5rem',
-            background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(6, 182, 212, 0.08) 100%)',
-            border: '1px solid rgba(16, 185, 129, 0.35)',
+            background: 'linear-gradient(135deg, rgba(5, 150, 105, 0.08) 0%, rgba(2, 132, 199, 0.06) 100%)',
+            border: '1px solid rgba(5, 150, 105, 0.3)',
+            boxShadow: 'var(--shadow-lg)',
             display: 'flex',
             flexWrap: 'wrap',
             alignItems: 'center',
@@ -138,7 +140,7 @@ export default function SprintRoadmap({ onOpenProjectModal }) {
                 width: '48px',
                 height: '48px',
                 borderRadius: '12px',
-                background: 'rgba(16, 185, 129, 0.2)',
+                background: 'rgba(5, 150, 105, 0.15)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -149,11 +151,11 @@ export default function SprintRoadmap({ onOpenProjectModal }) {
               <ShieldCheck size={26} />
             </div>
             <div>
-              <div style={{ fontSize: '1.1rem', fontWeight: '800', color: '#ffffff' }}>
+              <div style={{ fontSize: '1.1rem', fontWeight: '800', color: 'var(--text-primary)' }}>
                 100% On-Time Delivery Guarantee
               </div>
-              <div style={{ fontSize: '0.875rem', color: '#a7f3d0' }}>
-                If we don’t deliver your completed production build within 7 business days, we refund $500 per day of delay.
+              <div style={{ fontSize: '0.875rem', color: '#065f46', fontWeight: '600' }}>
+                If we don’t deliver your completed production build within 7 business days, we refund ₹2,500 per day of delay.
               </div>
             </div>
           </div>

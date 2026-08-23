@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Utensils, Calendar, Clock, Users, Sparkles, ArrowRight, CheckCircle2, Award, Wine } from 'lucide-react';
+import { Utensils, Calendar, Sparkles, ArrowRight, Award } from 'lucide-react';
 
 export default function MaisonEliteDiningTemplate({ onAdoptTemplate }) {
   const [guestCount, setGuestCount] = useState(2);
@@ -48,26 +48,26 @@ export default function MaisonEliteDiningTemplate({ onAdoptTemplate }) {
   const filteredMenu = menuFilter === 'all' ? menuItems : menuItems.filter(m => m.category === menuFilter);
 
   return (
-    <div style={{ background: '#0a0806', color: '#fef3c7', padding: '2rem 1.5rem', fontFamily: 'var(--font-sans)', minHeight: '100%' }}>
+    <div style={{ background: '#f8fafc', color: '#0f172a', padding: '2rem 1.5rem', fontFamily: 'var(--font-sans)', minHeight: '100%' }}>
       
       {/* Header */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2.5rem', borderBottom: '1px solid rgba(245,158,11,0.2)', paddingBottom: '1rem' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2.5rem', borderBottom: '1px solid #e2e8f0', paddingBottom: '1rem' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-          <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: 'linear-gradient(135deg, #f59e0b, #d97706)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <Utensils size={18} color="#000" />
+          <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: 'linear-gradient(135deg, #d97706, #f59e0b)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <Utensils size={18} color="#fff" />
           </div>
           <div>
-            <span style={{ fontFamily: 'var(--font-display)', fontWeight: '900', fontSize: '1.2rem', letterSpacing: '0.05em', color: '#ffffff' }}>
-              MAISON <span style={{ color: '#f59e0b' }}>ÉLITE</span>
+            <span style={{ fontFamily: 'var(--font-display)', fontWeight: '900', fontSize: '1.2rem', letterSpacing: '0.05em', color: '#0f172a' }}>
+              MAISON <span style={{ color: '#d97706' }}>ÉLITE</span>
             </span>
-            <div style={{ fontSize: '0.65rem', color: '#f59e0b', letterSpacing: '0.15em' }}>TWO MICHELIN STARS 2026</div>
+            <div style={{ fontSize: '0.65rem', color: '#d97706', letterSpacing: '0.15em', fontWeight: '800' }}>TWO MICHELIN STARS 2026</div>
           </div>
         </div>
 
         <button
           onClick={() => onAdoptTemplate && onAdoptTemplate('Maison Élite (Fine Dining & Hospitality)')}
           className="btn btn-primary btn-sm"
-          style={{ background: 'linear-gradient(135deg, #f59e0b, #b45309)', border: 'none', color: '#000', fontWeight: '800', fontSize: '0.8rem' }}
+          style={{ background: 'linear-gradient(135deg, #d97706, #f59e0b)', border: 'none', color: '#fff', fontWeight: '800', fontSize: '0.8rem' }}
         >
           <span>Adopt Maison Élite</span>
           <ArrowRight size={14} />
@@ -76,30 +76,30 @@ export default function MaisonEliteDiningTemplate({ onAdoptTemplate }) {
 
       {/* Hero Banner */}
       <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 3rem auto' }}>
-        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', padding: '0.25rem 0.8rem', background: 'rgba(245,158,11,0.15)', border: '1px solid rgba(245,158,11,0.3)', borderRadius: '9999px', color: '#fbbf24', fontSize: '0.75rem', fontWeight: '700', marginBottom: '1rem' }}>
+        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', padding: '0.25rem 0.8rem', background: 'rgba(217, 119, 6, 0.1)', border: '1px solid rgba(217, 119, 6, 0.3)', borderRadius: '9999px', color: '#d97706', fontSize: '0.75rem', fontWeight: '800', marginBottom: '1rem' }}>
           <Award size={14} />
           <span>THREE ROSETTES & RELAIS & CHÂTEAUX MEMBER</span>
         </div>
-        <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: '900', lineHeight: '1.1', marginBottom: '1rem', color: '#fffbeb' }}>
+        <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: '900', lineHeight: '1.1', marginBottom: '1rem', color: '#0f172a' }}>
           A Symphony of French Haute Gastronomy
         </h2>
-        <p style={{ color: '#d1d5db', fontSize: '0.95rem', lineHeight: '1.6' }}>
+        <p style={{ color: '#475569', fontSize: '0.95rem', lineHeight: '1.6' }}>
           Crafted by Chef Patron Jean-Luc Mercier. An intimate 24-seat culinary destination celebrating rare botanical harvests, aged grand cru reserves, and bespoke hospitality.
         </p>
       </div>
 
       {/* Interactive Feature 1: Michelin Table Reservation Widget */}
-      <div style={{ background: 'rgba(23, 18, 12, 0.9)', border: '1px solid rgba(245,158,11,0.35)', borderRadius: '1.25rem', padding: '1.75rem', marginBottom: '3rem', boxShadow: '0 20px 40px rgba(0,0,0,0.6)' }}>
+      <div style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: '1.25rem', padding: '1.75rem', marginBottom: '3rem', boxShadow: 'var(--shadow-md)' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem', marginBottom: '1.5rem' }}>
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: '800', fontSize: '1.1rem', color: '#f59e0b' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: '800', fontSize: '1.1rem', color: '#d97706' }}>
               <Calendar size={20} />
               <span>Interactive Table Reservation Experience</span>
             </div>
-            <p style={{ fontSize: '0.8rem', color: '#9ca3af' }}>Select guest count, atmosphere, and service time slot.</p>
+            <p style={{ fontSize: '0.8rem', color: '#64748b' }}>Select guest count, atmosphere, and service time slot.</p>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(245,158,11,0.15)', padding: '0.4rem 0.8rem', borderRadius: '8px', fontSize: '0.75rem', color: '#fcd34d', fontWeight: '700' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(217, 119, 6, 0.1)', padding: '0.4rem 0.8rem', borderRadius: '8px', fontSize: '0.75rem', color: '#b45309', fontWeight: '800' }}>
             <Sparkles size={14} /> Only 4 Tables Left Tonight
           </div>
         </div>
@@ -109,7 +109,7 @@ export default function MaisonEliteDiningTemplate({ onAdoptTemplate }) {
           
           {/* Guest Count */}
           <div>
-            <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: '700', color: '#fef3c7', marginBottom: '0.5rem' }}>
+            <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: '800', color: '#0f172a', marginBottom: '0.5rem' }}>
               Number of Guests
             </label>
             <div style={{ display: 'flex', gap: '0.4rem' }}>
@@ -121,11 +121,11 @@ export default function MaisonEliteDiningTemplate({ onAdoptTemplate }) {
                     flex: 1,
                     padding: '0.6rem 0',
                     borderRadius: '0.5rem',
-                    background: guestCount === num ? '#f59e0b' : 'rgba(255,255,255,0.06)',
-                    color: guestCount === num ? '#000' : '#fef3c7',
+                    background: guestCount === num ? '#d97706' : '#f1f5f9',
+                    color: guestCount === num ? '#fff' : '#475569',
                     fontWeight: '800',
                     fontSize: '0.85rem',
-                    border: 'none',
+                    border: '1px solid #e2e8f0',
                     cursor: 'pointer'
                   }}
                 >
@@ -137,7 +137,7 @@ export default function MaisonEliteDiningTemplate({ onAdoptTemplate }) {
 
           {/* Time Slot */}
           <div>
-            <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: '700', color: '#fef3c7', marginBottom: '0.5rem' }}>
+            <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: '800', color: '#0f172a', marginBottom: '0.5rem' }}>
               Evening Seating Time
             </label>
             <div style={{ display: 'flex', gap: '0.4rem' }}>
@@ -149,11 +149,11 @@ export default function MaisonEliteDiningTemplate({ onAdoptTemplate }) {
                     flex: 1,
                     padding: '0.6rem 0',
                     borderRadius: '0.5rem',
-                    background: mealTime === time ? '#f59e0b' : 'rgba(255,255,255,0.06)',
-                    color: mealTime === time ? '#000' : '#fef3c7',
+                    background: mealTime === time ? '#d97706' : '#f1f5f9',
+                    color: mealTime === time ? '#fff' : '#475569',
                     fontWeight: '800',
                     fontSize: '0.85rem',
-                    border: 'none',
+                    border: '1px solid #e2e8f0',
                     cursor: 'pointer'
                   }}
                 >
@@ -167,7 +167,7 @@ export default function MaisonEliteDiningTemplate({ onAdoptTemplate }) {
 
         {/* Atmosphere Selector */}
         <div style={{ marginBottom: '1.5rem' }}>
-          <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: '700', color: '#fef3c7', marginBottom: '0.5rem' }}>
+          <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: '800', color: '#0f172a', marginBottom: '0.5rem' }}>
             Dining Atmosphere & Room Atmosphere
           </label>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '0.75rem' }}>
@@ -178,14 +178,15 @@ export default function MaisonEliteDiningTemplate({ onAdoptTemplate }) {
                 style={{
                   padding: '1rem',
                   borderRadius: '0.75rem',
-                  background: atmosphere === atm.id ? 'rgba(245,158,11,0.2)' : 'rgba(0,0,0,0.3)',
-                  border: atmosphere === atm.id ? '1px solid #f59e0b' : '1px solid rgba(255,255,255,0.06)',
+                  background: atmosphere === atm.id ? 'rgba(217, 119, 6, 0.08)' : '#f8fafc',
+                  border: atmosphere === atm.id ? '1px solid #d97706' : '1px solid #e2e8f0',
                   cursor: 'pointer',
-                  transition: 'all 150ms ease'
+                  transition: 'all 150ms ease',
+                  boxShadow: atmosphere === atm.id ? 'var(--shadow-sm)' : 'none'
                 }}
               >
-                <div style={{ fontSize: '0.85rem', fontWeight: '800', color: '#ffffff' }}>{atm.name}</div>
-                <div style={{ fontSize: '0.75rem', color: '#fbbf24', marginTop: '0.2rem' }}>{atm.surcharge}</div>
+                <div style={{ fontSize: '0.85rem', fontWeight: '800', color: '#0f172a' }}>{atm.name}</div>
+                <div style={{ fontSize: '0.75rem', color: '#b45309', marginTop: '0.2rem', fontWeight: '600' }}>{atm.surcharge}</div>
               </div>
             ))}
           </div>
@@ -193,21 +194,21 @@ export default function MaisonEliteDiningTemplate({ onAdoptTemplate }) {
 
         {/* Booking Summary Box */}
         {bookingConfirmed ? (
-          <div style={{ padding: '1.25rem', borderRadius: '0.75rem', background: 'rgba(16,185,129,0.15)', border: '1px solid #10b981', color: '#34d399', textAlign: 'center', fontWeight: '700' }}>
+          <div style={{ padding: '1.25rem', borderRadius: '0.75rem', background: 'rgba(5, 150, 105, 0.1)', border: '1px solid #059669', color: '#065f46', textAlign: 'center', fontWeight: '800' }}>
             ✓ Table Reserved: {guestCount} Guests at {mealTime} in {atmospheres.find(a => a.id === atmosphere)?.name}! VIP Concierge confirmation dispatched.
           </div>
         ) : (
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem', borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: '1.25rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem', borderTop: '1px solid #e2e8f0', paddingTop: '1.25rem' }}>
             <div>
-              <div style={{ fontSize: '0.75rem', color: '#9ca3af' }}>Current Booking Preference:</div>
-              <div style={{ fontSize: '0.95rem', fontWeight: '800', color: '#fef3c7' }}>
+              <div style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: '600' }}>Current Booking Preference:</div>
+              <div style={{ fontSize: '0.95rem', fontWeight: '800', color: '#0f172a' }}>
                 {guestCount} Guests • {mealTime} • {atmospheres.find(a => a.id === atmosphere)?.name}
               </div>
             </div>
             <button
               onClick={() => setBookingConfirmed(true)}
               className="btn btn-primary"
-              style={{ background: 'linear-gradient(135deg, #f59e0b, #d97706)', border: 'none', color: '#000', fontWeight: '800' }}
+              style={{ background: 'linear-gradient(135deg, #d97706, #f59e0b)', border: 'none', color: '#fff', fontWeight: '800' }}
             >
               Confirm VIP Table RSVP
             </button>
@@ -218,7 +219,7 @@ export default function MaisonEliteDiningTemplate({ onAdoptTemplate }) {
       {/* Interactive Feature 2: Filterable Degustation Menu */}
       <div>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem', marginBottom: '1.25rem' }}>
-          <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem', fontWeight: '800', color: '#fffbeb' }}>
+          <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem', fontWeight: '800', color: '#0f172a' }}>
             Autumn Degustation & Sommelier Pairings
           </h3>
 
@@ -237,9 +238,9 @@ export default function MaisonEliteDiningTemplate({ onAdoptTemplate }) {
                   borderRadius: '9999px',
                   fontSize: '0.75rem',
                   fontWeight: '700',
-                  background: menuFilter === btn.id ? '#f59e0b' : 'rgba(255,255,255,0.06)',
-                  color: menuFilter === btn.id ? '#000' : '#d1d5db',
-                  border: 'none',
+                  background: menuFilter === btn.id ? '#d97706' : '#f1f5f9',
+                  color: menuFilter === btn.id ? '#ffffff' : '#475569',
+                  border: '1px solid #e2e8f0',
                   cursor: 'pointer'
                 }}
               >
@@ -249,13 +250,27 @@ export default function MaisonEliteDiningTemplate({ onAdoptTemplate }) {
           </div>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1rem' }}>
+        {/* Menu Cards */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem' }}>
           {filteredMenu.map((item) => (
-            <div key={item.id} style={{ padding: '1.25rem', background: 'rgba(255,255,255,0.03)', borderRadius: '0.75rem', border: '1px solid rgba(245,158,11,0.15)' }}>
-              <div style={{ fontSize: '1rem', fontWeight: '800', color: '#fffbeb', marginBottom: '0.35rem' }}>{item.title}</div>
-              <p style={{ fontSize: '0.8rem', color: '#9ca3af', lineHeight: '1.5', marginBottom: '0.75rem' }}>{item.desc}</p>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.75rem', color: '#f59e0b', fontWeight: '600' }}>
-                <Wine size={14} /> {item.wine}
+            <div
+              key={item.id}
+              style={{
+                padding: '1.25rem',
+                borderRadius: '0.85rem',
+                background: '#ffffff',
+                border: '1px solid #e2e8f0',
+                boxShadow: 'var(--shadow-sm)'
+              }}
+            >
+              <div style={{ fontSize: '1.05rem', fontWeight: '800', color: '#0f172a', marginBottom: '0.35rem' }}>
+                {item.title}
+              </div>
+              <p style={{ fontSize: '0.825rem', color: '#475569', lineHeight: '1.6', marginBottom: '0.75rem' }}>
+                {item.desc}
+              </p>
+              <div style={{ fontSize: '0.75rem', color: '#b45309', fontWeight: '700', borderTop: '1px solid #f1f5f9', paddingTop: '0.5rem' }}>
+                🍷 Pairing: {item.wine}
               </div>
             </div>
           ))}

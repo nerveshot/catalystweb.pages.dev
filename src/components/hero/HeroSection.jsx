@@ -134,8 +134,9 @@ export default function HeroSection({ onOpenEstimator, onScrollToTemplates, onOp
             className="glass-card"
             style={{
               padding: '1.75rem',
-              background: 'linear-gradient(180deg, rgba(19, 21, 32, 0.8) 0%, rgba(13, 14, 21, 0.9) 100%)',
-              border: '1px solid rgba(16, 185, 129, 0.25)',
+              background: 'var(--bg-card)',
+              border: '1px solid rgba(16, 185, 129, 0.3)',
+              boxShadow: 'var(--shadow-md)',
               position: 'relative'
             }}
           >
@@ -145,7 +146,7 @@ export default function HeroSection({ onOpenEstimator, onScrollToTemplates, onOp
                   width: '42px',
                   height: '42px',
                   borderRadius: '10px',
-                  background: 'rgba(16, 185, 129, 0.15)',
+                  background: 'rgba(5, 150, 105, 0.1)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -157,9 +158,9 @@ export default function HeroSection({ onOpenEstimator, onScrollToTemplates, onOp
               <span
                 style={{
                   fontSize: '0.75rem',
-                  fontWeight: '700',
+                  fontWeight: '800',
                   color: 'var(--aurora-emerald)',
-                  background: 'rgba(16, 185, 129, 0.12)',
+                  background: 'rgba(5, 150, 105, 0.1)',
                   padding: '0.2rem 0.6rem',
                   borderRadius: '6px'
                 }}
@@ -167,13 +168,13 @@ export default function HeroSection({ onOpenEstimator, onScrollToTemplates, onOp
                 MOBILE & DESKTOP
               </span>
             </div>
-            <div style={{ fontFamily: 'var(--font-display)', fontSize: '2.4rem', fontWeight: '900', color: '#ffffff', lineHeight: '1.1' }}>
+            <div style={{ fontFamily: 'var(--font-display)', fontSize: '2.4rem', fontWeight: '900', color: 'var(--text-primary)', lineHeight: '1.1' }}>
               99-100<span style={{ fontSize: '1.2rem', color: 'var(--aurora-emerald)' }}>/100</span>
             </div>
-            <div style={{ fontSize: '0.95rem', fontWeight: '700', color: 'var(--text-primary)', marginTop: '0.35rem' }}>
+            <div style={{ fontSize: '0.95rem', fontWeight: '800', color: 'var(--text-primary)', marginTop: '0.35rem' }}>
               Google PageSpeed Score
             </div>
-            <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>
+            <div style={{ fontSize: '0.825rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>
               Sub-0.4s FCP with 0 layout shift (CLS).
             </div>
           </div>
@@ -183,8 +184,9 @@ export default function HeroSection({ onOpenEstimator, onScrollToTemplates, onOp
             className="glass-card"
             style={{
               padding: '1.75rem',
-              background: 'linear-gradient(180deg, rgba(19, 21, 32, 0.8) 0%, rgba(13, 14, 21, 0.9) 100%)',
-              border: '1px solid rgba(99, 102, 241, 0.25)',
+              background: 'var(--bg-card)',
+              border: '1px solid rgba(79, 70, 229, 0.3)',
+              boxShadow: 'var(--shadow-md)',
               position: 'relative'
             }}
           >
@@ -194,11 +196,11 @@ export default function HeroSection({ onOpenEstimator, onScrollToTemplates, onOp
                   width: '42px',
                   height: '42px',
                   borderRadius: '10px',
-                  background: 'rgba(99, 102, 241, 0.15)',
+                  background: 'rgba(79, 70, 229, 0.1)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  color: 'var(--aurora-violet-light)'
+                  color: 'var(--aurora-violet)'
                 }}
               >
                 <Clock size={22} />
@@ -206,9 +208,9 @@ export default function HeroSection({ onOpenEstimator, onScrollToTemplates, onOp
               <span
                 style={{
                   fontSize: '0.75rem',
-                  fontWeight: '700',
-                  color: 'var(--aurora-violet-light)',
-                  background: 'rgba(99, 102, 241, 0.12)',
+                  fontWeight: '800',
+                  color: 'var(--aurora-violet)',
+                  background: 'rgba(79, 70, 229, 0.1)',
                   padding: '0.2rem 0.6rem',
                   borderRadius: '6px'
                 }}
@@ -216,13 +218,13 @@ export default function HeroSection({ onOpenEstimator, onScrollToTemplates, onOp
                 ON-TIME GUARANTEED
               </span>
             </div>
-            <div style={{ fontFamily: 'var(--font-display)', fontSize: '2.4rem', fontWeight: '900', color: '#ffffff', lineHeight: '1.1' }}>
-              7-Day<span style={{ fontSize: '1.2rem', color: 'var(--aurora-violet-light)' }}> Sprint</span>
+            <div style={{ fontFamily: 'var(--font-display)', fontSize: '2.4rem', fontWeight: '900', color: 'var(--text-primary)', lineHeight: '1.1' }}>
+              7-Day<span style={{ fontSize: '1.2rem', color: 'var(--aurora-violet)' }}> Sprint</span>
             </div>
-            <div style={{ fontSize: '0.95rem', fontWeight: '700', color: 'var(--text-primary)', marginTop: '0.35rem' }}>
+            <div style={{ fontSize: '0.95rem', fontWeight: '800', color: 'var(--text-primary)', marginTop: '0.35rem' }}>
               Concept to Global Launch
             </div>
-            <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>
+            <div style={{ fontSize: '0.825rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>
               High-velocity execution without agency drag.
             </div>
           </div>
@@ -232,8 +234,9 @@ export default function HeroSection({ onOpenEstimator, onScrollToTemplates, onOp
             className="glass-card"
             style={{
               padding: '1.75rem',
-              background: 'linear-gradient(180deg, rgba(19, 21, 32, 0.8) 0%, rgba(13, 14, 21, 0.9) 100%)',
-              border: '1px solid rgba(6, 182, 212, 0.25)',
+              background: 'var(--bg-card)',
+              border: '1px solid rgba(2, 132, 199, 0.3)',
+              boxShadow: 'var(--shadow-md)',
               position: 'relative'
             }}
           >
@@ -243,11 +246,11 @@ export default function HeroSection({ onOpenEstimator, onScrollToTemplates, onOp
                   width: '42px',
                   height: '42px',
                   borderRadius: '10px',
-                  background: 'rgba(6, 182, 212, 0.15)',
+                  background: 'rgba(2, 132, 199, 0.1)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  color: 'var(--aurora-cyan-light)'
+                  color: 'var(--aurora-cyan)'
                 }}
               >
                 <Code2 size={22} />
@@ -255,9 +258,9 @@ export default function HeroSection({ onOpenEstimator, onScrollToTemplates, onOp
               <span
                 style={{
                   fontSize: '0.75rem',
-                  fontWeight: '700',
-                  color: 'var(--aurora-cyan-light)',
-                  background: 'rgba(6, 182, 212, 0.12)',
+                  fontWeight: '800',
+                  color: 'var(--aurora-cyan)',
+                  background: 'rgba(2, 132, 199, 0.1)',
                   padding: '0.2rem 0.6rem',
                   borderRadius: '6px'
                 }}
@@ -265,13 +268,13 @@ export default function HeroSection({ onOpenEstimator, onScrollToTemplates, onOp
                 ZERO VENDOR LOCK-IN
               </span>
             </div>
-            <div style={{ fontFamily: 'var(--font-display)', fontSize: '2.4rem', fontWeight: '900', color: '#ffffff', lineHeight: '1.1' }}>
-              100%<span style={{ fontSize: '1.2rem', color: 'var(--aurora-cyan-light)' }}> Rights</span>
+            <div style={{ fontFamily: 'var(--font-display)', fontSize: '2.4rem', fontWeight: '900', color: 'var(--text-primary)', lineHeight: '1.1' }}>
+              100%<span style={{ fontSize: '1.2rem', color: 'var(--aurora-cyan)' }}> Rights</span>
             </div>
-            <div style={{ fontSize: '0.95rem', fontWeight: '700', color: 'var(--text-primary)', marginTop: '0.35rem' }}>
+            <div style={{ fontSize: '0.95rem', fontWeight: '800', color: 'var(--text-primary)', marginTop: '0.35rem' }}>
               Bespoke Code & IP Ownership
             </div>
-            <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>
+            <div style={{ fontSize: '0.825rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>
               Full Git repo, clean Vanilla CSS & React.
             </div>
           </div>
@@ -281,8 +284,9 @@ export default function HeroSection({ onOpenEstimator, onScrollToTemplates, onOp
             className="glass-card"
             style={{
               padding: '1.75rem',
-              background: 'linear-gradient(180deg, rgba(19, 21, 32, 0.8) 0%, rgba(13, 14, 21, 0.9) 100%)',
-              border: '1px solid rgba(245, 158, 11, 0.25)',
+              background: 'var(--bg-card)',
+              border: '1px solid rgba(217, 119, 6, 0.3)',
+              boxShadow: 'var(--shadow-md)',
               position: 'relative'
             }}
           >
@@ -292,7 +296,7 @@ export default function HeroSection({ onOpenEstimator, onScrollToTemplates, onOp
                   width: '42px',
                   height: '42px',
                   borderRadius: '10px',
-                  background: 'rgba(245, 158, 11, 0.15)',
+                  background: 'rgba(217, 119, 6, 0.1)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -304,9 +308,9 @@ export default function HeroSection({ onOpenEstimator, onScrollToTemplates, onOp
               <span
                 style={{
                   fontSize: '0.75rem',
-                  fontWeight: '700',
+                  fontWeight: '800',
                   color: 'var(--aurora-gold)',
-                  background: 'rgba(245, 158, 11, 0.12)',
+                  background: 'rgba(217, 119, 6, 0.1)',
                   padding: '0.2rem 0.6rem',
                   borderRadius: '6px'
                 }}
@@ -314,13 +318,13 @@ export default function HeroSection({ onOpenEstimator, onScrollToTemplates, onOp
                 PROVEN ROI
               </span>
             </div>
-            <div style={{ fontFamily: 'var(--font-display)', fontSize: '2.4rem', fontWeight: '900', color: '#ffffff', lineHeight: '1.1' }}>
+            <div style={{ fontFamily: 'var(--font-display)', fontSize: '2.4rem', fontWeight: '900', color: 'var(--text-primary)', lineHeight: '1.1' }}>
               +3.4x<span style={{ fontSize: '1.2rem', color: 'var(--aurora-gold)' }}> Avg Lift</span>
             </div>
-            <div style={{ fontSize: '0.95rem', fontWeight: '700', color: 'var(--text-primary)', marginTop: '0.35rem' }}>
+            <div style={{ fontSize: '0.95rem', fontWeight: '800', color: 'var(--text-primary)', marginTop: '0.35rem' }}>
               Conversion & Lead Increase
             </div>
-            <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>
+            <div style={{ fontSize: '0.825rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>
               Calculated across 40+ client deployments.
             </div>
           </div>

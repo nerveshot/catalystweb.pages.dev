@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Sparkles, Menu, X, ArrowUpRight, Zap, ShieldCheck } from 'lucide-react';
+import { Sparkles, Menu, X, ArrowUpRight, Zap, ShieldCheck, Sun, Moon } from 'lucide-react';
 
 export default function Navbar({ onOpenProjectModal, activeView, onNavigate }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,6 +13,16 @@ export default function Navbar({ onOpenProjectModal, activeView, onNavigate }) {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const toggleTheme = () => {
+    const nextDark = !isDark;
+    setIsDark(nextDark);
+    if (nextDark) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+    }
+  };
 
   const navLinks = [
     { label: '7 Live Templates', href: '#templates' },
@@ -45,10 +56,11 @@ export default function Navbar({ onOpenProjectModal, activeView, onNavigate }) {
         zIndex: 100,
         transition: 'all 300ms ease',
         padding: scrolled ? '0.75rem 0' : '1.25rem 0',
-        background: scrolled ? 'rgba(7, 7, 9, 0.85)' : 'transparent',
+        background: scrolled ? 'var(--bg-surface)' : 'transparent',
         backdropFilter: scrolled ? 'blur(20px)' : 'none',
         WebkitBackdropFilter: scrolled ? 'blur(20px)' : 'none',
-        borderBottom: scrolled ? '1px solid rgba(255, 255, 255, 0.08)' : '1px solid transparent',
+        borderBottom: scrolled ? '1px solid var(--bg-card-border)' : '1px solid transparent',
+        boxShadow: scrolled ? 'var(--shadow-sm)' : 'none'
       }}
     >
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
@@ -75,7 +87,7 @@ export default function Navbar({ onOpenProjectModal, activeView, onNavigate }) {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              boxShadow: '0 0 20px rgba(99, 102, 241, 0.4)',
+              boxShadow: '0 4px 15px rgba(79, 70, 229, 0.35)',
               color: '#ffffff'
             }}
           >
@@ -102,8 +114,8 @@ export default function Navbar({ onOpenProjectModal, activeView, onNavigate }) {
                   fontWeight: '700',
                   padding: '0.15rem 0.45rem',
                   borderRadius: '6px',
-                  background: 'rgba(6, 182, 212, 0.15)',
-                  border: '1px solid rgba(6, 182, 212, 0.3)',
+                  background: 'rgba(2, 132, 199, 0.1)',
+                  border: '1px solid rgba(2, 132, 199, 0.25)',
                   color: 'var(--aurora-cyan-light)',
                   fontFamily: 'var(--font-mono)'
                 }}
@@ -111,7 +123,7 @@ export default function Navbar({ onOpenProjectModal, activeView, onNavigate }) {
                 launch.pages.dev
               </span>
             </div>
-            <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', fontWeight: '500' }}>
+            <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', fontWeight: '600' }}>
               Cloudflare-Native Web Studio
             </div>
           </div>
@@ -123,10 +135,11 @@ export default function Navbar({ onOpenProjectModal, activeView, onNavigate }) {
             display: 'none',
             alignItems: 'center',
             gap: '1.75rem',
-            background: 'rgba(19, 21, 32, 0.6)',
+            background: 'var(--bg-surface)',
             padding: '0.5rem 1.25rem',
             borderRadius: '9999px',
-            border: '1px solid rgba(255, 255, 255, 0.08)',
+            border: '1px solid var(--bg-card-border)',
+            boxShadow: 'var(--shadow-sm)',
             backdropFilter: 'blur(16px)'
           }}
           className="desktop-nav"
@@ -141,11 +154,11 @@ export default function Navbar({ onOpenProjectModal, activeView, onNavigate }) {
               }}
               style={{
                 fontSize: '0.875rem',
-                fontWeight: '600',
+                fontWeight: '700',
                 color: 'var(--text-secondary)',
                 transition: 'color 150ms ease',
               }}
-              onMouseEnter={(e) => (e.target.style.color = '#ffffff')}
+              onMouseEnter={(e) => (e.target.style.color = 'var(--aurora-violet)')}
               onMouseLeave={(e) => (e.target.style.color = 'var(--text-secondary)')}
             >
               {link.label}
@@ -154,7 +167,7 @@ export default function Navbar({ onOpenProjectModal, activeView, onNavigate }) {
         </nav>
 
         {/* Right Action Bar */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
           
           {/* Live Availability Badge */}
           <div
@@ -164,8 +177,8 @@ export default function Navbar({ onOpenProjectModal, activeView, onNavigate }) {
               gap: '0.45rem',
               padding: '0.4rem 0.85rem',
               borderRadius: '9999px',
-              background: 'rgba(16, 185, 129, 0.12)',
-              border: '1px solid rgba(16, 185, 129, 0.28)',
+              background: 'rgba(5, 150, 105, 0.08)',
+              border: '1px solid rgba(5, 150, 105, 0.25)',
               color: 'var(--aurora-emerald)',
               fontSize: '0.78rem',
               fontWeight: '700',
@@ -177,13 +190,36 @@ export default function Navbar({ onOpenProjectModal, activeView, onNavigate }) {
                 width: '7px',
                 height: '7px',
                 borderRadius: '50%',
-                backgroundColor: '#10b981',
-                boxShadow: '0 0 8px #10b981',
+                backgroundColor: '#059669',
+                boxShadow: '0 0 8px #059669',
                 animation: 'pulse-live 2s infinite ease-in-out'
               }}
             />
             2 Spots Open for August
           </div>
+
+          {/* Theme Mode Switcher Toggle */}
+          <button
+            onClick={toggleTheme}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: '38px',
+              height: '38px',
+              borderRadius: '10px',
+              background: 'var(--bg-surface)',
+              border: '1px solid var(--bg-card-border)',
+              color: 'var(--text-primary)',
+              boxShadow: 'var(--shadow-sm)',
+              cursor: 'pointer',
+              transition: 'all 150ms ease'
+            }}
+            title={isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+            aria-label="Toggle Theme"
+          >
+            {isDark ? <Sun size={18} color="#f59e0b" /> : <Moon size={18} color="#6366f1" />}
+          </button>
 
           {/* Primary CTA */}
           <button
@@ -205,9 +241,9 @@ export default function Navbar({ onOpenProjectModal, activeView, onNavigate }) {
               width: '40px',
               height: '40px',
               borderRadius: '10px',
-              background: 'rgba(255, 255, 255, 0.05)',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
-              color: '#ffffff'
+              background: 'var(--bg-surface)',
+              border: '1px solid var(--bg-card-border)',
+              color: 'var(--text-primary)'
             }}
             className="mobile-toggle"
             aria-label="Toggle Navigation Menu"
@@ -225,14 +261,14 @@ export default function Navbar({ onOpenProjectModal, activeView, onNavigate }) {
             top: '100%',
             left: 0,
             right: 0,
-            background: 'rgba(13, 14, 21, 0.98)',
+            background: 'var(--bg-surface)',
             backdropFilter: 'blur(24px)',
-            borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+            borderBottom: '1px solid var(--bg-card-border)',
             padding: '1.5rem',
             display: 'flex',
             flexDirection: 'column',
             gap: '1rem',
-            boxShadow: '0 20px 40px rgba(0,0,0,0.8)'
+            boxShadow: 'var(--shadow-lg)'
           }}
         >
           <div
@@ -271,10 +307,10 @@ export default function Navbar({ onOpenProjectModal, activeView, onNavigate }) {
               }}
               style={{
                 fontSize: '1.05rem',
-                fontWeight: '600',
+                fontWeight: '700',
                 color: 'var(--text-primary)',
                 padding: '0.5rem 0',
-                borderBottom: '1px solid rgba(255, 255, 255, 0.05)'
+                borderBottom: '1px solid var(--bg-card-border)'
               }}
             >
               {link.label}
@@ -289,7 +325,7 @@ export default function Navbar({ onOpenProjectModal, activeView, onNavigate }) {
             className="btn btn-primary"
             style={{ marginTop: '0.5rem', width: '100%' }}
           >
-            <span>Book 7-Day Sprint ($2,450)</span>
+            <span>Book 7-Day Sprint (from ₹19,999)</span>
             <ArrowUpRight size={18} />
           </button>
         </div>

@@ -22,8 +22,8 @@ export default function Footer({ onSelectTemplate, onNavigate, onOpenProjectModa
       style={{
         position: 'relative',
         zIndex: 10,
-        background: 'linear-gradient(180deg, rgba(7,7,9,0.5) 0%, rgba(13,14,21,0.98) 100%)',
-        borderTop: '1px solid rgba(255, 255, 255, 0.08)',
+        background: 'linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-tertiary) 100%)',
+        borderTop: '1px solid var(--bg-card-border)',
         paddingTop: '5rem',
         paddingBottom: '3rem',
       }}
@@ -36,8 +36,9 @@ export default function Footer({ onSelectTemplate, onNavigate, onOpenProjectModa
           style={{
             padding: '3rem 2.5rem',
             marginBottom: '4.5rem',
-            background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.12) 0%, rgba(6, 182, 212, 0.08) 50%, rgba(168, 85, 247, 0.1) 100%)',
-            border: '1px solid rgba(99, 102, 241, 0.3)',
+            background: 'linear-gradient(135deg, rgba(79, 70, 229, 0.08) 0%, rgba(2, 132, 199, 0.06) 50%, rgba(124, 58, 237, 0.08) 100%)',
+            border: '1px solid rgba(79, 70, 229, 0.25)',
+            boxShadow: 'var(--shadow-lg)',
             display: 'flex',
             flexWrap: 'wrap',
             alignItems: 'center',
@@ -52,8 +53,8 @@ export default function Footer({ onSelectTemplate, onNavigate, onOpenProjectModa
                 alignItems: 'center',
                 gap: '0.5rem',
                 fontSize: '0.8rem',
-                fontWeight: '700',
-                color: 'var(--aurora-cyan-light)',
+                fontWeight: '800',
+                color: 'var(--aurora-violet)',
                 textTransform: 'uppercase',
                 letterSpacing: '0.08em',
                 marginBottom: '0.5rem'
@@ -66,9 +67,9 @@ export default function Footer({ onSelectTemplate, onNavigate, onOpenProjectModa
               style={{
                 fontFamily: 'var(--font-display)',
                 fontSize: 'clamp(1.75rem, 3vw, 2.35rem)',
-                fontWeight: '800',
+                fontWeight: '900',
                 lineHeight: '1.2',
-                color: '#ffffff',
+                color: 'var(--text-primary)',
                 marginBottom: '0.75rem'
               }}
             >
@@ -116,7 +117,7 @@ export default function Footer({ onSelectTemplate, onNavigate, onOpenProjectModa
               >
                 <Zap size={20} />
               </div>
-              <span style={{ fontFamily: 'var(--font-display)', fontWeight: '900', fontSize: '1.3rem' }}>
+              <span style={{ fontFamily: 'var(--font-display)', fontWeight: '900', fontSize: '1.3rem', color: 'var(--text-primary)' }}>
                 LaunchPages
               </span>
             </div>
@@ -132,8 +133,8 @@ export default function Footer({ onSelectTemplate, onNavigate, onOpenProjectModa
                 gap: '0.6rem',
                 padding: '0.45rem 0.85rem',
                 borderRadius: '8px',
-                background: 'rgba(16, 185, 129, 0.08)',
-                border: '1px solid rgba(16, 185, 129, 0.2)',
+                background: 'rgba(5, 150, 105, 0.08)',
+                border: '1px solid rgba(5, 150, 105, 0.2)',
                 fontSize: '0.78rem',
                 color: 'var(--aurora-emerald)',
                 fontFamily: 'var(--font-mono)'
@@ -144,8 +145,8 @@ export default function Footer({ onSelectTemplate, onNavigate, onOpenProjectModa
                   width: '8px',
                   height: '8px',
                   borderRadius: '50%',
-                  backgroundColor: '#10b981',
-                  boxShadow: '0 0 8px #10b981'
+                  backgroundColor: '#059669',
+                  boxShadow: '0 0 8px #059669'
                 }}
               />
               <span>Edge Status: Online ({latency}ms)</span>
@@ -158,8 +159,8 @@ export default function Footer({ onSelectTemplate, onNavigate, onOpenProjectModa
               style={{
                 fontFamily: 'var(--font-display)',
                 fontSize: '1rem',
-                fontWeight: '700',
-                color: '#ffffff',
+                fontWeight: '800',
+                color: 'var(--text-primary)',
                 marginBottom: '1.25rem',
                 letterSpacing: '0.02em'
               }}
@@ -180,7 +181,7 @@ export default function Footer({ onSelectTemplate, onNavigate, onOpenProjectModa
                       textAlign: 'left',
                       transition: 'color 150ms ease'
                     }}
-                    onMouseEnter={(e) => (e.currentTarget.style.color = '#ffffff')}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--aurora-violet)')}
                     onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-secondary)')}
                   >
                     <span style={{ color: t.accentColor, fontSize: '0.75rem' }}>●</span>
@@ -198,8 +199,8 @@ export default function Footer({ onSelectTemplate, onNavigate, onOpenProjectModa
               style={{
                 fontFamily: 'var(--font-display)',
                 fontSize: '1rem',
-                fontWeight: '700',
-                color: '#ffffff',
+                fontWeight: '800',
+                color: 'var(--text-primary)',
                 marginBottom: '1.25rem',
                 letterSpacing: '0.02em'
               }}
@@ -222,8 +223,8 @@ export default function Footer({ onSelectTemplate, onNavigate, onOpenProjectModa
               style={{
                 fontFamily: 'var(--font-display)',
                 fontSize: '1rem',
-                fontWeight: '700',
-                color: '#ffffff',
+                fontWeight: '800',
+                color: 'var(--text-primary)',
                 marginBottom: '1.25rem',
                 letterSpacing: '0.02em'
               }}
@@ -238,7 +239,7 @@ export default function Footer({ onSelectTemplate, onNavigate, onOpenProjectModa
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
                   style={{ color: 'var(--text-secondary)', transition: 'color 150ms ease' }}
-                  onMouseEnter={(e) => (e.target.style.color = '#ffffff')}
+                  onMouseEnter={(e) => (e.target.style.color = 'var(--aurora-violet)')}
                   onMouseLeave={(e) => (e.target.style.color = 'var(--text-secondary)')}
                 >
                   Terms & Conditions Agreement

@@ -56,10 +56,11 @@ export default function FaqAccordion() {
               width: '100%',
               padding: '1rem 1.25rem 1rem 3.25rem',
               borderRadius: '1rem',
-              background: 'rgba(19, 21, 32, 0.8)',
-              border: '1px solid rgba(99, 102, 241, 0.25)',
-              color: '#ffffff',
+              background: 'var(--bg-surface)',
+              border: '1px solid var(--bg-card-border)',
+              color: 'var(--text-primary)',
               fontSize: '0.95rem',
+              boxShadow: 'var(--shadow-sm)',
               backdropFilter: 'blur(16px)',
               outline: 'none'
             }}
@@ -81,8 +82,9 @@ export default function FaqAccordion() {
                   className="glass-card"
                   style={{
                     borderRadius: '0.875rem',
-                    border: isOpen ? '1px solid rgba(99, 102, 241, 0.4)' : '1px solid rgba(255, 255, 255, 0.08)',
-                    background: isOpen ? 'rgba(19, 21, 32, 0.9)' : 'rgba(13, 14, 21, 0.7)',
+                    border: isOpen ? '1px solid var(--aurora-violet)' : '1px solid var(--bg-card-border)',
+                    background: 'var(--bg-card)',
+                    boxShadow: isOpen ? 'var(--shadow-md)' : 'var(--shadow-sm)',
                     transition: 'all 200ms ease'
                   }}
                 >
@@ -103,8 +105,8 @@ export default function FaqAccordion() {
                       <span
                         style={{
                           fontSize: '0.72rem',
-                          color: 'var(--aurora-cyan-light)',
-                          fontWeight: '700',
+                          color: 'var(--aurora-violet)',
+                          fontWeight: '800',
                           textTransform: 'uppercase',
                           letterSpacing: '0.05em',
                           display: 'block',
@@ -113,7 +115,7 @@ export default function FaqAccordion() {
                       >
                         {faq.category}
                       </span>
-                      <span style={{ fontSize: '1.05rem', fontWeight: '700', color: '#ffffff' }}>
+                      <span style={{ fontSize: '1.05rem', fontWeight: '800', color: 'var(--text-primary)' }}>
                         {faq.question}
                       </span>
                     </div>
@@ -122,7 +124,7 @@ export default function FaqAccordion() {
                       style={{
                         transform: isOpen ? 'rotate(180deg)' : 'rotate(0)',
                         transition: 'transform 200ms ease',
-                        color: isOpen ? 'var(--aurora-cyan)' : 'var(--text-muted)'
+                        color: isOpen ? 'var(--aurora-violet)' : 'var(--text-muted)'
                       }}
                     >
                       <ChevronDown size={20} />
@@ -130,7 +132,7 @@ export default function FaqAccordion() {
                   </button>
 
                   {isOpen && (
-                    <div style={{ padding: '0 1.5rem 1.5rem 1.5rem', fontSize: '0.925rem', color: 'var(--text-secondary)', lineHeight: '1.7', borderTop: '1px solid rgba(255, 255, 255, 0.05)', paddingTop: '1rem' }}>
+                    <div style={{ padding: '0 1.5rem 1.5rem 1.5rem', fontSize: '0.925rem', color: 'var(--text-secondary)', lineHeight: '1.7', borderTop: '1px solid var(--bg-card-border)', paddingTop: '1rem' }}>
                       {faq.answer}
                     </div>
                   )}

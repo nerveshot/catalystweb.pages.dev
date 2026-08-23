@@ -75,24 +75,24 @@ export const TEMPLATES = [
   },
   {
     id: 'vanguard',
-    name: 'Vanguard Academy',
-    tagline: 'Elite Global Academy & Ivy-League Preparatory Portal',
+    name: "St. Xavier's Collegiate",
+    tagline: 'Legacy of Excellence in Education Since 1941 • Jaipur',
     category: 'education',
     categoryLabel: 'Schools & Higher Ed',
-    badge: 'Ivy League',
+    badge: "NAAC 'A' Grade",
     badgeColor: 'cyan',
     accentColor: '#06b6d4',
-    description: 'Authoritative academic portal featuring dynamic tuition & merit grant calculator, 100% Ivy acceptance stat grid, interactive curriculum stream explorer, and Open Day RSVP.',
-    metrics: { speed: '0.33s LCP', score: '100/100', conversion: '+185% Admissions Inquiry' },
+    description: "Prestigious institutional portal inspired by St. Xavier's Jaipur featuring live academic circular ticker, NEP 2020 multi-disciplinary course explorer, dynamic tuition & merit grant calculator, and campus tour RSVP.",
+    metrics: { speed: '0.30s LCP', score: '100/100', conversion: '+240% Enrollment Inquiries' },
     features: [
-      'Dynamic Academic Tuition & Merit Grant Aid Estimator',
-      'Key Metric Dashboard (100% Acceptance, 6:1 Ratio, 42 APs)',
-      'Filterable Academic Stream Explorer (STEM, Law, Arts, AI)',
-      'Interactive Campus Tour & Open-Day RSVP Calendar',
-      'Direct Dean Advisory Consultation Request'
+      'Live Academic Circulars & Breaking Notices Ticker',
+      'NEP 2020 Multi-Disciplinary Department & Course Explorer',
+      'Dynamic Merit Scholarship & Tuition Aid Calculator (INR)',
+      'Jesuit Heritage, NAAC Commendations & Campus Life Matrix',
+      'Instant Campus Tour RSVP & Digital Prospectus Dispatch'
     ],
-    previewBg: 'linear-gradient(135deg, rgba(6, 182, 212, 0.15), rgba(59, 130, 246, 0.1))',
-    heroTag: 'CENTURY OF ACADEMIC EXCELLENCE'
+    previewBg: 'linear-gradient(135deg, rgba(6, 182, 212, 0.15), rgba(59, 130, 246, 0.12))',
+    heroTag: 'ESTABLISHED 1941 • JAIPUR, RAJASTHAN'
   },
   {
     id: 'apex',
@@ -104,7 +104,7 @@ export const TEMPLATES = [
     badgeColor: 'emerald',
     accentColor: '#10b981',
     description: 'Sleek architectural grid featuring interactive blueprint and floorplan switchers, 360° virtual room inspectors, unit specifications, and private broker viewing scheduler.',
-    metrics: { speed: '0.29s LCP', score: '99/100', conversion: '$64M Sold Portfolio' },
+    metrics: { speed: '0.29s LCP', score: '99/100', conversion: '₹520 Cr Sold Portfolio' },
     features: [
       'Interactive Architectural Floorplan Switcher with Room Dimensions',
       'Virtual 360° Living Room, Sky Penthouse & Master Suite Inspector',

@@ -51,12 +51,12 @@ export default function ConstellationCanvas() {
         this.size = Math.random() * 2 + 0.8;
         this.speedX = (Math.random() - 0.5) * 0.45;
         this.speedY = (Math.random() - 0.5) * 0.45;
-        // Subtle aurora hues (cyan, violet, white)
+        // Soft luminous hues (indigo, sky blue, purple)
         const colors = [
-          'rgba(99, 102, 241, 0.8)',
-          'rgba(6, 182, 212, 0.8)',
-          'rgba(168, 85, 247, 0.7)',
-          'rgba(255, 255, 255, 0.6)'
+          'rgba(79, 70, 229, 0.45)',
+          'rgba(2, 132, 199, 0.45)',
+          'rgba(124, 58, 237, 0.4)',
+          'rgba(5, 150, 105, 0.35)'
         ];
         this.color = colors[Math.floor(Math.random() * colors.length)];
       }
@@ -116,9 +116,9 @@ export default function ConstellationCanvas() {
           const distance = Math.sqrt(dx * dx + dy * dy);
 
           if (distance < maxDistance) {
-            const opacity = (1 - distance / maxDistance) * 0.22;
+            const opacity = (1 - distance / maxDistance) * 0.15;
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(99, 102, 241, ${opacity})`;
+            ctx.strokeStyle = `rgba(79, 70, 229, ${opacity})`;
             ctx.lineWidth = 0.75;
             ctx.moveTo(particles[a].x, particles[a].y);
             ctx.lineTo(particles[b].x, particles[b].y);
@@ -132,9 +132,9 @@ export default function ConstellationCanvas() {
           const dy = particles[a].y - mouse.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
           if (distance < mouse.radius) {
-            const opacity = (1 - distance / mouse.radius) * 0.35;
+            const opacity = (1 - distance / mouse.radius) * 0.25;
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(6, 182, 212, ${opacity})`;
+            ctx.strokeStyle = `rgba(2, 132, 199, ${opacity})`;
             ctx.lineWidth = 1;
             ctx.moveTo(particles[a].x, particles[a].y);
             ctx.lineTo(mouse.x, mouse.y);

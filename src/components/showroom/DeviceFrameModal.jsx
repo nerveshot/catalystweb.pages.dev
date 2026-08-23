@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Monitor, Tablet, Smartphone, Maximize2, Minimize2, X, ArrowRight, Sparkles, Zap, ShieldCheck } from 'lucide-react';
+import { Monitor, Tablet, Smartphone, Maximize2, Minimize2, X, Sparkles } from 'lucide-react';
 import NexusSaaSTemplate from './templates/NexusSaaSTemplate';
 import AuraLuxeCreatorTemplate from './templates/AuraLuxeCreatorTemplate';
 import MaisonEliteDiningTemplate from './templates/MaisonEliteDiningTemplate';
@@ -51,9 +51,9 @@ export default function DeviceFrameModal({ template, onClose, onAdoptTemplate })
           width: '390px',
           maxWidth: '100%',
           height: '780px',
-          borderRadius: '40px',
-          border: '12px solid #1e293b',
-          boxShadow: '0 25px 60px -15px rgba(0,0,0,0.9), 0 0 30px rgba(99,102,241,0.2)',
+          borderRadius: '36px',
+          border: '10px solid #0f172a',
+          boxShadow: '0 25px 60px -15px rgba(0,0,0,0.3), 0 0 30px rgba(79,70,229,0.15)',
         };
       case 'tablet':
         return {
@@ -61,8 +61,8 @@ export default function DeviceFrameModal({ template, onClose, onAdoptTemplate })
           maxWidth: '100%',
           height: '820px',
           borderRadius: '24px',
-          border: '12px solid #1e293b',
-          boxShadow: '0 25px 60px -15px rgba(0,0,0,0.9), 0 0 30px rgba(99,102,241,0.2)',
+          border: '10px solid #0f172a',
+          boxShadow: '0 25px 60px -15px rgba(0,0,0,0.3), 0 0 30px rgba(79,70,229,0.15)',
         };
       case 'desktop':
       default:
@@ -71,8 +71,8 @@ export default function DeviceFrameModal({ template, onClose, onAdoptTemplate })
           maxWidth: '1280px',
           height: '820px',
           borderRadius: '16px',
-          border: '1px solid rgba(255,255,255,0.15)',
-          boxShadow: '0 30px 70px -20px rgba(0,0,0,0.9), 0 0 40px rgba(99,102,241,0.25)',
+          border: '1px solid #cbd5e1',
+          boxShadow: '0 30px 70px -20px rgba(0,0,0,0.2), 0 0 40px rgba(79,70,229,0.1)',
         };
     }
   };
@@ -83,9 +83,9 @@ export default function DeviceFrameModal({ template, onClose, onAdoptTemplate })
         position: 'fixed',
         inset: 0,
         zIndex: 1000,
-        background: 'rgba(5, 5, 8, 0.95)',
-        backdropFilter: 'blur(28px)',
-        WebkitBackdropFilter: 'blur(28px)',
+        background: 'rgba(15, 23, 42, 0.75)',
+        backdropFilter: 'blur(20px)',
+        WebkitBackdropFilter: 'blur(20px)',
         display: 'flex',
         flexDirection: 'column',
         animation: 'fadeIn 200ms ease-out'
@@ -96,38 +96,39 @@ export default function DeviceFrameModal({ template, onClose, onAdoptTemplate })
       <div
         style={{
           padding: '0.85rem 1.5rem',
-          background: 'rgba(13, 14, 21, 0.95)',
-          borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+          background: '#ffffff',
+          borderBottom: '1px solid #e2e8f0',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
           flexWrap: 'wrap',
-          gap: '1rem'
+          gap: '1rem',
+          boxShadow: '0 4px 12px rgba(0,0,0,0.05)'
         }}
       >
         {/* Template Info & Cloudflare Status */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <span style={{ fontWeight: '900', fontSize: '1.05rem', color: '#ffffff' }}>
+              <span style={{ fontWeight: '900', fontSize: '1.05rem', color: '#0f172a' }}>
                 {template.name}
               </span>
               <span
                 style={{
                   fontSize: '0.72rem',
-                  fontWeight: '700',
+                  fontWeight: '800',
                   padding: '0.15rem 0.5rem',
                   borderRadius: '9999px',
-                  background: 'rgba(99, 102, 241, 0.2)',
-                  color: 'var(--aurora-cyan-light)',
-                  border: '1px solid rgba(99, 102, 241, 0.3)'
+                  background: 'rgba(79, 70, 229, 0.1)',
+                  color: '#4f46e5',
+                  border: '1px solid rgba(79, 70, 229, 0.25)'
                 }}
               >
                 {template.categoryLabel}
               </span>
             </div>
-            <div style={{ fontSize: '0.75rem', color: '#94a3b8', display: 'flex', alignItems: 'center', gap: '0.75rem', marginTop: '0.15rem' }}>
-              <span style={{ color: '#10b981', fontWeight: '700' }}>● Speed: {template.metrics.speed}</span>
+            <div style={{ fontSize: '0.75rem', color: '#64748b', display: 'flex', alignItems: 'center', gap: '0.75rem', marginTop: '0.15rem' }}>
+              <span style={{ color: '#059669', fontWeight: '700' }}>● Speed: {template.metrics.speed}</span>
               <span>Score: {template.metrics.score}</span>
               <span>Lift: {template.metrics.conversion}</span>
             </div>
@@ -140,10 +141,10 @@ export default function DeviceFrameModal({ template, onClose, onAdoptTemplate })
             style={{
               display: 'flex',
               alignItems: 'center',
-              background: 'rgba(0, 0, 0, 0.6)',
+              background: '#f1f5f9',
               padding: '0.25rem',
               borderRadius: '10px',
-              border: '1px solid rgba(255, 255, 255, 0.1)'
+              border: '1px solid #e2e8f0'
             }}
           >
             <button
@@ -155,10 +156,12 @@ export default function DeviceFrameModal({ template, onClose, onAdoptTemplate })
                 padding: '0.4rem 0.85rem',
                 borderRadius: '8px',
                 fontSize: '0.8rem',
-                fontWeight: '600',
-                background: device === 'desktop' ? 'rgba(99, 102, 241, 0.3)' : 'transparent',
-                color: device === 'desktop' ? '#ffffff' : '#94a3b8',
-                border: device === 'desktop' ? '1px solid #6366f1' : 'none'
+                fontWeight: '700',
+                background: device === 'desktop' ? '#ffffff' : 'transparent',
+                color: device === 'desktop' ? '#4f46e5' : '#64748b',
+                border: device === 'desktop' ? '1px solid #cbd5e1' : 'none',
+                boxShadow: device === 'desktop' ? 'var(--shadow-sm)' : 'none',
+                cursor: 'pointer'
               }}
             >
               <Monitor size={15} />
@@ -174,10 +177,12 @@ export default function DeviceFrameModal({ template, onClose, onAdoptTemplate })
                 padding: '0.4rem 0.85rem',
                 borderRadius: '8px',
                 fontSize: '0.8rem',
-                fontWeight: '600',
-                background: device === 'tablet' ? 'rgba(99, 102, 241, 0.3)' : 'transparent',
-                color: device === 'tablet' ? '#ffffff' : '#94a3b8',
-                border: device === 'tablet' ? '1px solid #6366f1' : 'none'
+                fontWeight: '700',
+                background: device === 'tablet' ? '#ffffff' : 'transparent',
+                color: device === 'tablet' ? '#4f46e5' : '#64748b',
+                border: device === 'tablet' ? '1px solid #cbd5e1' : 'none',
+                boxShadow: device === 'tablet' ? 'var(--shadow-sm)' : 'none',
+                cursor: 'pointer'
               }}
             >
               <Tablet size={15} />
@@ -193,10 +198,12 @@ export default function DeviceFrameModal({ template, onClose, onAdoptTemplate })
                 padding: '0.4rem 0.85rem',
                 borderRadius: '8px',
                 fontSize: '0.8rem',
-                fontWeight: '600',
-                background: device === 'mobile' ? 'rgba(99, 102, 241, 0.3)' : 'transparent',
-                color: device === 'mobile' ? '#ffffff' : '#94a3b8',
-                border: device === 'mobile' ? '1px solid #6366f1' : 'none'
+                fontWeight: '700',
+                background: device === 'mobile' ? '#ffffff' : 'transparent',
+                color: device === 'mobile' ? '#4f46e5' : '#64748b',
+                border: device === 'mobile' ? '1px solid #cbd5e1' : 'none',
+                boxShadow: device === 'mobile' ? 'var(--shadow-sm)' : 'none',
+                cursor: 'pointer'
               }}
             >
               <Smartphone size={15} />
@@ -217,9 +224,10 @@ export default function DeviceFrameModal({ template, onClose, onAdoptTemplate })
               width: '38px',
               height: '38px',
               borderRadius: '8px',
-              background: 'rgba(255, 255, 255, 0.06)',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
-              color: '#ffffff'
+              background: '#f1f5f9',
+              border: '1px solid #e2e8f0',
+              color: '#334155',
+              cursor: 'pointer'
             }}
             title={isFullscreen ? "Exit Fullscreen" : "Fullscreen Sandbox"}
           >
@@ -246,9 +254,10 @@ export default function DeviceFrameModal({ template, onClose, onAdoptTemplate })
               width: '38px',
               height: '38px',
               borderRadius: '8px',
-              background: 'rgba(239, 68, 68, 0.15)',
-              border: '1px solid rgba(239, 68, 68, 0.3)',
-              color: '#f87171'
+              background: 'rgba(239, 68, 68, 0.1)',
+              border: '1px solid rgba(239, 68, 68, 0.25)',
+              color: '#dc2626',
+              cursor: 'pointer'
             }}
             title="Close Preview"
           >
@@ -266,7 +275,7 @@ export default function DeviceFrameModal({ template, onClose, onAdoptTemplate })
           alignItems: isFullscreen ? 'stretch' : 'center',
           justifyContent: 'center',
           padding: isFullscreen ? 0 : '1.5rem',
-          background: 'radial-gradient(circle, rgba(19,21,32,0.6) 0%, rgba(7,7,9,0.95) 100%)'
+          background: '#e2e8f0'
         }}
       >
         <div
@@ -274,7 +283,7 @@ export default function DeviceFrameModal({ template, onClose, onAdoptTemplate })
             ...getDeviceStyle(),
             overflowY: 'auto',
             position: 'relative',
-            background: '#070709',
+            background: '#ffffff',
             transition: 'width 250ms ease, height 250ms ease, border-radius 250ms ease',
           }}
         >
@@ -287,19 +296,19 @@ export default function DeviceFrameModal({ template, onClose, onAdoptTemplate })
                 left: 0,
                 right: 0,
                 zIndex: 50,
-                background: 'rgba(0,0,0,0.85)',
-                backdropFilter: 'blur(10px)',
+                background: '#ffffff',
+                borderBottom: '1px solid #e2e8f0',
                 padding: '0.4rem 1.25rem',
                 display: 'flex',
                 justifyContent: 'space-between',
                 alignItems: 'center',
                 fontSize: '0.7rem',
-                color: '#ffffff',
-                borderBottom: '1px solid rgba(255,255,255,0.05)'
+                color: '#0f172a',
+                fontWeight: '700'
               }}
             >
               <span>9:41</span>
-              <div style={{ width: '80px', height: '14px', borderRadius: '9999px', background: '#000' }} />
+              <div style={{ width: '80px', height: '14px', borderRadius: '9999px', background: '#0f172a' }} />
               <span>5G 100%</span>
             </div>
           )}

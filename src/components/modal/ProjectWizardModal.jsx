@@ -11,7 +11,7 @@ export default function ProjectWizardModal({ isOpen, onClose, initialData, onNav
     company: '',
     website: '',
     template: 'Nexus 3.0 (AI & SaaS)',
-    tier: '3–5 Bespoke Pages ($2,850)',
+    tier: '3–5 Bespoke Pages (₹34,999)',
     timeline: '7-Day Express Sprint',
     notes: '',
     agreedToTerms: false
@@ -26,7 +26,7 @@ export default function ProjectWizardModal({ isOpen, onClose, initialData, onNav
       setFormData((prev) => ({
         ...prev,
         template: initialData.template || initialData.industry ? `${initialData.industry} Edition` : prev.template,
-        tier: initialData.tier ? `${initialData.tier} ($${initialData.totalCost?.toLocaleString() || '2,850'})` : prev.tier,
+        tier: initialData.tier ? `${initialData.tier} (₹${initialData.totalCost?.toLocaleString('en-IN') || '2,25,000'})` : prev.tier,
         timeline: initialData.timeline ? `${initialData.timeline} Sprint` : prev.timeline,
         notes: initialData.addons?.length ? `Selected Add-Ons: ${initialData.addons.join(', ')}` : prev.notes
       }));
@@ -87,9 +87,9 @@ Status: Confirmed & Accepted Terms (Jaipur, Rajasthan, India)
           overflowY: 'auto',
           padding: '2.25rem',
           position: 'relative',
-          background: 'linear-gradient(180deg, rgba(19, 21, 32, 0.98) 0%, rgba(10, 11, 18, 0.99) 100%)',
-          border: '1px solid rgba(99, 102, 241, 0.35)',
-          boxShadow: '0 30px 80px rgba(0, 0, 0, 0.9)'
+          background: 'var(--bg-secondary)',
+          border: '1px solid var(--bg-card-border)',
+          boxShadow: 'var(--shadow-lg)'
         }}
       >
         
@@ -103,8 +103,8 @@ Status: Confirmed & Accepted Terms (Jaipur, Rajasthan, India)
             width: '36px',
             height: '36px',
             borderRadius: '8px',
-            background: 'rgba(255, 255, 255, 0.05)',
-            border: '1px solid rgba(255, 255, 255, 0.1)',
+            background: 'var(--bg-tertiary)',
+            border: '1px solid var(--bg-card-border)',
             color: 'var(--text-secondary)',
             display: 'flex',
             alignItems: 'center',
@@ -123,48 +123,48 @@ Status: Confirmed & Accepted Terms (Jaipur, Rajasthan, India)
                 width: '72px',
                 height: '72px',
                 borderRadius: '50%',
-                background: 'rgba(16, 185, 129, 0.15)',
-                border: '2px solid #10b981',
+                background: 'rgba(5, 150, 105, 0.12)',
+                border: '2px solid #059669',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 margin: '0 auto 1.5rem auto',
-                color: '#10b981'
+                color: '#059669'
               }}
             >
               <CheckCircle2 size={40} />
             </div>
 
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', padding: '0.3rem 0.8rem', background: 'rgba(99, 102, 241, 0.15)', borderRadius: '9999px', color: 'var(--aurora-cyan-light)', fontSize: '0.8rem', fontWeight: '700', marginBottom: '0.75rem' }}>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', padding: '0.3rem 0.8rem', background: 'rgba(79, 70, 229, 0.1)', borderRadius: '9999px', color: 'var(--aurora-violet)', fontSize: '0.8rem', fontWeight: '800', marginBottom: '0.75rem' }}>
               <Sparkles size={14} />
               <span>Project Brief Initialized</span>
             </div>
 
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '2rem', fontWeight: '900', color: '#ffffff', marginBottom: '0.5rem' }}>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '2rem', fontWeight: '900', color: 'var(--text-primary)', marginBottom: '0.5rem' }}>
               Project Reference #{refId}
             </h2>
 
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', maxWidth: '480px', margin: '0 auto 2rem auto', lineHeight: '1.6' }}>
-              Thank you, <strong style={{ color: '#ffffff' }}>{formData.name}</strong>. Your project brief has been logged into our engineering dispatch queue. We will review your requirements within 2 hours.
+              Thank you, <strong style={{ color: 'var(--text-primary)' }}>{formData.name}</strong>. Your project brief has been logged into our engineering dispatch queue. We will review your requirements within 2 hours.
             </p>
 
             {/* Brief Summary Box */}
             <div
               style={{
-                background: 'rgba(0, 0, 0, 0.5)',
-                border: '1px solid rgba(255, 255, 255, 0.1)',
+                background: 'var(--bg-tertiary)',
+                border: '1px solid var(--bg-card-border)',
                 borderRadius: '1rem',
                 padding: '1.5rem',
                 textAlign: 'left',
                 marginBottom: '2rem',
                 fontFamily: 'var(--font-mono)',
                 fontSize: '0.825rem',
-                color: '#cbd5e1'
+                color: 'var(--text-secondary)'
               }}
             >
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
                 <span style={{ color: 'var(--text-muted)' }}>Client:</span>
-                <span style={{ fontWeight: '700', color: '#fff' }}>{formData.name} ({formData.company})</span>
+                <span style={{ fontWeight: '700', color: 'var(--text-primary)' }}>{formData.name} ({formData.company})</span>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
                 <span style={{ color: 'var(--text-muted)' }}>Contact:</span>
@@ -172,15 +172,15 @@ Status: Confirmed & Accepted Terms (Jaipur, Rajasthan, India)
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
                 <span style={{ color: 'var(--text-muted)' }}>Template Architecture:</span>
-                <span style={{ color: 'var(--aurora-cyan-light)' }}>{formData.template}</span>
+                <span style={{ color: 'var(--aurora-cyan-light)', fontWeight: '700' }}>{formData.template}</span>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
                 <span style={{ color: 'var(--text-muted)' }}>Target Delivery:</span>
-                <span style={{ color: 'var(--aurora-emerald)' }}>{formData.timeline}</span>
+                <span style={{ color: 'var(--aurora-emerald)', fontWeight: '700' }}>{formData.timeline}</span>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <span style={{ color: 'var(--text-muted)' }}>IP & Source Rights:</span>
-                <span style={{ color: '#ffffff' }}>100% Client Beneficial Ownership</span>
+                <span style={{ color: 'var(--text-primary)', fontWeight: '700' }}>100% Client Beneficial Ownership</span>
               </div>
             </div>
 
@@ -191,7 +191,7 @@ Status: Confirmed & Accepted Terms (Jaipur, Rajasthan, India)
                 className="btn btn-secondary"
                 style={{ minWidth: '180px' }}
               >
-                {copied ? <Check size={16} color="#10b981" /> : <Copy size={16} />}
+                {copied ? <Check size={16} color="#059669" /> : <Copy size={16} />}
                 <span>{copied ? 'Copied to Clipboard!' : 'Copy Brief Summary'}</span>
               </button>
 
@@ -215,12 +215,12 @@ Status: Confirmed & Accepted Terms (Jaipur, Rajasthan, India)
                 <div style={{ width: '28px', height: '28px', borderRadius: '6px', background: 'var(--gradient-aurora)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff' }}>
                   <Zap size={16} />
                 </div>
-                <span style={{ fontSize: '0.8rem', fontWeight: '800', color: 'var(--aurora-cyan-light)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                <span style={{ fontSize: '0.8rem', fontWeight: '800', color: 'var(--aurora-violet)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
                   LaunchPages 7-Day Sprint Intake
                 </span>
               </div>
 
-              <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.75rem', fontWeight: '900', color: '#ffffff' }}>
+              <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.75rem', fontWeight: '900', color: 'var(--text-primary)' }}>
                 {step === 1 && '1. Contact & Brand Identity'}
                 {step === 2 && '2. Template Foundation & Scope'}
                 {step === 3 && '3. Feature Brief & Terms Agreement'}
@@ -318,19 +318,19 @@ Status: Confirmed & Accepted Terms (Jaipur, Rajasthan, India)
                     </select>
                   </div>
 
-                  <div className="form-group">
-                    <label className="form-label">Target Page Scope Tier</label>
-                    <select
-                      className="form-select"
-                      value={formData.tier}
-                      onChange={(e) => setFormData({ ...formData, tier: e.target.value })}
-                    >
-                      <option value="1-Page High-Converting Landing ($1,850)">1-Page High-Converting Landing ($1,850)</option>
-                      <option value="3–5 Bespoke Pages ($2,850)">3–5 Bespoke Pages ($2,850)</option>
-                      <option value="6–10 Rich Multi-Section Pages ($4,200)">6–10 Rich Multi-Section Pages ($4,200)</option>
-                      <option value="12+ Enterprise Architectural Web App ($6,500)">12+ Enterprise Architectural Web App ($6,500)</option>
-                    </select>
-                  </div>
+                    <div className="form-group">
+                      <label className="form-label">Target Page Scope Tier</label>
+                      <select
+                        className="form-select"
+                        value={formData.tier}
+                        onChange={(e) => setFormData({ ...formData, tier: e.target.value })}
+                      >
+                        <option value="1-Page High-Converting Landing (₹19,999)">1-Page High-Converting Landing (₹19,999)</option>
+                        <option value="3–5 Bespoke Pages (₹34,999)">3–5 Bespoke Pages (₹34,999)</option>
+                        <option value="6–10 Rich Multi-Section Pages (₹59,999)">6–10 Rich Multi-Section Pages (₹59,999)</option>
+                        <option value="12+ Enterprise Architectural Web App (₹99,999)">12+ Enterprise Architectural Web App (₹99,999)</option>
+                      </select>
+                    </div>
 
                   <div className="form-group">
                     <label className="form-label">Target Delivery Sprint</label>
@@ -364,8 +364,8 @@ Status: Confirmed & Accepted Terms (Jaipur, Rajasthan, India)
                   {/* Terms Checkbox */}
                   <div
                     style={{
-                      background: 'rgba(255, 255, 255, 0.04)',
-                      border: '1px solid rgba(255, 255, 255, 0.1)',
+                      background: 'var(--bg-tertiary)',
+                      border: '1px solid var(--bg-card-border)',
                       borderRadius: '0.75rem',
                       padding: '1rem',
                       marginBottom: '1.5rem'
@@ -377,7 +377,7 @@ Status: Confirmed & Accepted Terms (Jaipur, Rajasthan, India)
                         required
                         checked={formData.agreedToTerms}
                         onChange={(e) => setFormData({ ...formData, agreedToTerms: e.target.checked })}
-                        style={{ marginTop: '3px', width: '18px', height: '18px', accentColor: '#6366f1' }}
+                        style={{ marginTop: '3px', width: '18px', height: '18px', accentColor: '#4f46e5' }}
                       />
                       <span style={{ fontSize: '0.825rem', color: 'var(--text-secondary)', lineHeight: '1.5' }}>
                         I agree to the LaunchPages{' '}
@@ -387,7 +387,7 @@ Status: Confirmed & Accepted Terms (Jaipur, Rajasthan, India)
                             onClose();
                             onNavigateTerms();
                           }}
-                          style={{ color: 'var(--aurora-cyan-light)', textDecoration: 'underline', fontWeight: '600' }}
+                          style={{ color: 'var(--aurora-violet)', textDecoration: 'underline', fontWeight: '700' }}
                         >
                           Terms & Conditions
                         </button>
